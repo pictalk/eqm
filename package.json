@@ -2,7 +2,7 @@
   "name": "@pictalk/eqm",
   "version": "1.0.0",
   "description": "Elasticsearch Query Mapper",
-  "main": "index.js",
+  "main": "lib/eqm.js",
   "scripts": {
     "build": "rm -Rf lib && tsc",
     "bench": "node bench/index.js",
