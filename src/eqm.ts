@@ -54,9 +54,13 @@ export function mustNot(...clauses: Es.Queries[]): Es.MustNotClause {
   };
 }
 
-export function should(...clauses: Es.Queries[]): Es.ShouldClause {
+export function should(
+  minShouldMatch: number,
+  ...clauses: Es.Queries[]
+): Es.ShouldClause {
   return {
     should: clauses,
+    minimum_should_match: minShouldMatch,
   };
 }
 

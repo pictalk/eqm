@@ -97,6 +97,7 @@ export type MustNotClause = {
 
 export type ShouldClause = {
   should: Array<Queries>;
+  minimum_should_match: number;
 };
 
 export type FilterClause = {
