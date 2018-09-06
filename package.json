@@ -9,7 +9,6 @@
     "test:update": "jest --verbose -u",
     "test": "jest --verbose",
     "prepublishOnly": "npm run build",
-    "prerelease": "npm run test",
     "release": "standard-version",
     "postrelease": "git push --follow-tags origin master && npm publish --access public"
   },
