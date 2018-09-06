@@ -190,15 +190,15 @@ declare module "@pictalk/eqm" {
   ): MatchPhraseClause;
   declare export function matchAll(key: string, value: any): MatchAllClause;
   declare export function matchNone(key: string, value: any): MatchNoneClause;
-  declare export function must(...clauses: Queries[]): MustClause;
-  declare export function mustNot(...clauses: Queries[]): MustNotClause;
+  declare export function must(...clauses: (?Queries)[]): MustClause;
+  declare export function mustNot(...clauses: (?Queries)[]): MustNotClause;
   declare export function should(
     minShouldMatch: number,
-    ...clauses: Queries[]
+    ...clauses: (?Queries)[]
   ): ShouldClause;
-  declare export function filter(...clauses: Queries[]): FilterClause;
-  declare export function bool(...clauses: BoolQueries[]): BoolClause;
+  declare export function filter(...clauses: (?Queries)[]): FilterClause;
+  declare export function bool(...clauses: (?BoolQueries)[]): BoolClause;
   declare export function query(
-    ...clauses: Array<Queries | BoolClause>
+    ...clauses: Array<?(Queries | BoolClause)>
   ): QueryClause;
 }
