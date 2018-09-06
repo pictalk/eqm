@@ -88,15 +88,15 @@ export type MatchNoneClause = {
 //* End Queries
 
 export type MustClause = {
-  must: SingleOrList<Queries>;
+  must: Array<Queries>;
 };
 
 export type MustNotClause = {
-  must_not: SingleOrList<Queries>;
+  must_not: Array<Queries>;
 };
 
 export type ShouldClause = {
-  should: SingleOrList<Queries>;
+  should: Array<Queries>;
 };
 
 export type FilterClause = {
@@ -153,7 +153,7 @@ export type QueryObj = TermClause &
  * the `filter` parameter in the [constant_score](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-constant-score-query.html) query,
  * or the [filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-filter-aggregation.html) aggregation.
  */
-export type FilterContext = SingleOrList<Queries>;
+export type FilterContext = Array<Queries>;
 
 /**
  * **Query context**
