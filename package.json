@@ -1,0 +1,41 @@
+{
+  "name": "@pictalk/eqm",
+  "version": "1.0.0",
+  "description": "Elasticsearch Query Mapper",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -Rf lib && tsc",
+    "bench": "node bench/index.js",
+    "test:update": "jest --verbose -u",
+    "test": "jest --verbose",
+    "prepublishOnly": "npm run build",
+    "prerelease": "npm run test",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master && npm publish --access public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)$"
+  },
+  "devDependencies": {
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "standard-version": "^4.4.0",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.3"
+  }
+}

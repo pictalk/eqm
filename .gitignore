@@ -1,0 +1,6 @@
+.*
+!.gitignore
+!.prettierrc
+lib/
+node_modules/
+tmp/
