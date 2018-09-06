@@ -100,6 +100,7 @@ declare module "@pictalk/eqm" {
 
   declare export type ShouldClause = {
     should: Array<Queries>,
+    minimum_should_match: number,
   };
 
   declare export type FilterClause = {
@@ -191,7 +192,10 @@ declare module "@pictalk/eqm" {
   declare export function matchNone(key: string, value: any): MatchNoneClause;
   declare export function must(...clauses: Queries[]): MustClause;
   declare export function mustNot(...clauses: Queries[]): MustNotClause;
-  declare export function should(...clauses: Queries[]): ShouldClause;
+  declare export function should(
+    minShouldMatch: number,
+    ...clauses: Queries[]
+  ): ShouldClause;
   declare export function filter(...clauses: Queries[]): FilterClause;
   declare export function bool(...clauses: BoolQueries[]): BoolClause;
   declare export function query(
